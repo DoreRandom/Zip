@@ -3614,7 +3614,7 @@ int unzReadCurrentFile(unzFile file, voidp buf, unsigned len, bool *reached_eof)
 		if (uDoEncHead>0)
 		{
 			char bufcrc = pfile_in_zip_read_info->stream.next_in[uDoEncHead - 1];
-			pfile_in_zip_read_info->rest_read_uncompressed -= uDoEncHead;
+			//pfile_in_zip_read_info->rest_read_uncompressed -= uDoEncHead;
 			pfile_in_zip_read_info->stream.avail_in -= uDoEncHead;
 			pfile_in_zip_read_info->stream.next_in += uDoEncHead;
 			pfile_in_zip_read_info->encheadleft -= uDoEncHead;
